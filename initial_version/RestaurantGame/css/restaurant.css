@@ -1,0 +1,375 @@
+body {
+    height: 100vh;
+    background: url(../images/dose-juice-sTPy-oeA3h0-unsplash.jpg) no-repeat center;
+    background-size: 100% 100%;
+    padding: 0 10px;
+    position: relative;
+}
+
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+/* 时间和金钱区 */
+.top {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 10px 0 20px 0;
+}
+
+.topConBox {
+    height: 40px;
+    border: 6px solid rgba(107, 105, 0, 0.784);
+    background-image: linear-gradient(yellow 50%, rgb(226, 201, 11) 50%);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.timeBox {
+    width: 36%;
+    justify-content: space-evenly;
+}
+
+.moneyBox {
+    width: 52%;
+    padding-right: 20px;
+    justify-content: flex-end;
+}
+
+/* 人头像公共类 */
+.manIcon {
+    width: 80px;
+    height: 80px;
+    border: 4px solid #fff;
+    border-radius: 50%;
+}
+
+/* 厨师区域 */
+.allchefBox {
+    width: 100%;
+    background-color: rgb(226, 201, 11);
+    border: 6px solid #fff;
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: repeat(3, 33.333333%);
+    grid-template-rows: repeat(2, 50%);
+    justify-items: center;
+}
+
+.chefBox {
+    margin: 10px 0 28px 0;
+    /* background-image: linear-gradient(to right, rgb(212, 212, 212) 50%, gray 50%); */
+    position: relative;
+}
+
+.fireChef {
+    position: absolute;
+    right: -10px;
+    top: -25px;
+    transform: rotate(45deg);
+    font-size: 40px;
+    color: rgba(128, 124, 111);
+}
+
+.addChefBox {
+    background-color: rgb(212, 212, 212);
+    margin: 10px 0 25px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.addChefBox img {
+    position: absolute;
+    top: 0;
+    left: -61px;
+    filter: drop-shadow(60px 0 0px white);
+}
+
+.addChefBox::after {
+    content: '+';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgba(98, 76, 3, .8);
+    text-align: center;
+    font-size: 60px;
+}
+
+.finishedIcon {
+    position: absolute;
+    left: -15px;
+    bottom: 0;
+    width: 60px;
+    height: 60px;
+}
+
+/* 顾客区域 */
+.allcustomerBox {
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    top: 51%;
+    height: 38%;
+    border: 6px solid #fff;
+    background-color: rgb(253, 142, 51);
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(2, 50%);
+}
+
+.tableBox {
+    margin-left: 20px;
+    background-image: linear-gradient(to right, #dddddd 50%, #aaaaaa 50%);
+    position: relative;
+}
+
+.tableBox:nth-child(1),
+.tableBox:nth-child(2) {
+    align-self: center;
+}
+
+.customerOntable {
+    position: absolute;
+    top: -4px;
+    left: -4px;
+}
+
+.orderDishesQueue {
+    position: absolute;
+    right: -60px;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.appeaseIcon,
+.payIcon {
+    position: absolute;
+    top: 33px;
+    left: -16px;
+    width: 60px;
+    height: 60px;
+}
+
+.waitCustomerBox {
+    position: absolute;
+    bottom: -50px;
+}
+
+.waitCustomerBox:nth-child(1) {
+    right: 0;
+}
+
+.waitCustomerBox:nth-child(2) {
+    right: 60px;
+}
+
+.waitCustomerBox:nth-child(3) {
+    right: 120px;
+}
+
+.waitCustomerBox:nth-child(4) {
+    right: 180px;
+}
+
+.waitCustomerBox:nth-child(5) {
+    right: 240px;
+}
+
+/* 进度条 */
+.shade {
+    width: 80px;
+    height: 24px;
+    border: 3px solid #fff;
+    border-radius: 3px;
+    background: rgb(73, 118, 202);
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    line-height: 18px;
+}
+
+.cookingBar,
+.waitingBar {
+    position: absolute;
+    left: -4px;
+    bottom: -12px;
+}
+
+.dishesBar {
+    margin-bottom: 1px;
+    position: relative;
+}
+
+.dishesBar .serveIcon {
+    position: absolute;
+    right: -27px;
+    top: -3px;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    background-image: linear-gradient(to right, #e22f29 50%, #8f0707 50%);
+    border: 2px solid #fff;
+}
+
+/* 遮罩层 */
+.blackShadow {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .6);
+    z-index: 1;
+}
+
+/* 弹框信息区 */
+/* 提取公共类 */
+.inline-box {
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 6px solid #fff;
+    background-color: rgb(226, 201, 11);
+    border-radius: 15px;
+    z-index: 2;
+    padding: 15px 20px;
+}
+
+.inline-box h2 {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.inline-box p {
+    font-size: 16px;
+}
+
+button {
+    height: 60px;
+    font-size: 16px;
+    border-radius: 30px;
+    text-align: center;
+    border: 3px solid rgba(69, 56, 3, 0.849);
+    cursor: pointer;
+    outline: none;
+    background: none;
+}
+
+.alertBtn {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.yesConfirm {
+    width: 60%;
+}
+
+.noConfirm {
+    width: 35%;
+}
+
+.noOrderDishes {
+    background-color: rgb(189, 189, 189);
+    pointer-events: none;
+}
+
+/* .gameBeginBox,
+.blackShadow, */
+.buyChefBox,
+.fireChefBox,
+.orderDishesMenuBox {
+    display: none;
+}
+
+/* 游戏开始界面 */
+.gameBeginBox .gameIntro {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.gameBeginBox .gamePlay {
+    width: 100%;
+}
+
+/* 点菜 */
+.orderMan {
+    background-image: linear-gradient(to right, rgb(47, 146, 185) 50%, rgb(42, 91, 177) 50% 100%);
+    position: absolute;
+    top: -40px;
+    left: 5px;
+}
+
+.orderDishesMenuBox .orderManInfo {
+    margin-bottom: 15px;
+    text-align: right;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.menuDishes {
+    width: 100%;
+    border: 3px solid rgba(107, 105, 0, 0.784);
+    padding: 15px;
+    background-color: #fff;
+}
+
+.menuDishes dl {
+    margin-bottom: 10px;
+}
+
+.menuDishes dl dt {
+    margin-bottom: 10px;
+}
+
+.menuDishes dl dd {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.menuDishes dl dd span {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+/* 信息弹框 */
+.freeTableAlert,
+.finishedOrderAlert,
+.disappointedAlert,
+.finishedPayAlert,
+.finishedBuyChefAlert,
+.finishedFireChefAlert,
+.lackPayFireMoneyAlert {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    text-align: center;
+    padding: 20px 10px;
+    border: 6px solid #fff;
+    border-radius: 15px;
+    color: rgb(138, 95, 15);
+    display: none;
+    z-index: 2;
+}
+
+.noFinished {
+    background-color: pink;
+}
+
+.finished {
+    background-color: rgb(215, 236, 136);
+}

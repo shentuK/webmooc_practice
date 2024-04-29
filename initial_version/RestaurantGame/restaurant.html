@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=no,maximum-scale=1.0,minimum-scale=1.0">
+    <title>restaurant餐厅游戏</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/restaurant.css">
+</head>
+
+<body>
+    <!-- 遮罩 -->
+    <section class="blackShadow"></section>
+
+    <!-- 开始游戏界面 -->
+    <section class="gameBeginBox inline-box" id="gameBeginBox">
+        <h2>WebMOOC餐厅即将开业啦！</h2>
+        <p>WebMOOC餐厅即将开业，请认真经营你的餐厅吧</p>
+        <p>经营餐厅需要做好下面几件事情！加油！</p>
+        <div class="gameIntro">
+            <span>招聘厨师</span>
+            <span>迎接客人</span>
+            <span>烹饪美食</span>
+        </div>
+        <button class="gamePlay" id="gamePlay">开始经营吧</button>
+    </section>
+
+    <!-- 主界面 -->
+    <section class="mainContainer">
+        <div class="top">
+            <!-- 时间W/D -->
+            <div class="timeBox topConBox">
+                <p>W<span id="dateWeek">1</span></p>
+                <p>D<span id="dateDay">1</span></p>
+            </div>
+            <!-- 金钱区域 -->
+            <div class="moneyBox topConBox">
+                <span id="money">500</span>
+            </div>
+        </div>
+        <!-- 厨师区域 -->
+        <div class="allchefBox">
+            <!-- 招聘厨师按钮 -->
+            <div class="addChefBox manIcon" id="addChef">
+                <img src="./images/iconfinder_Chef-2_379358.png" alt="">
+            </div>
+        </div>
+        <!-- 顾客区域 -->
+        <div class="allcustomerBox">
+            <!-- 餐桌 -->
+            <div class="tableBox manIcon"></div>
+            <div class="tableBox manIcon"></div>
+            <div class="tableBox manIcon"></div>
+            <div class="tableBox manIcon"></div>
+            <!-- 排队顾客队列 -->
+            <div class="waitingQueue"></div>
+        </div>
+    </section>
+
+    <!-- 点菜区域 -->
+    <section class="orderDishesMenuBox inline-box">
+        <div class="orderMan manIcon"></div>
+        <p class="orderManInfo">
+            <span id="orderManName"></span> 正在点菜，已点 <span id="orderMantotalPrice">0</span> 元的菜
+        </p>
+        <div class="menuDishes">
+            <dl>
+                <dt>凉菜（二选一，可不点）</dt>
+                <dd>
+                    <label>
+                        <input type="checkbox" name="liangcai" value="凉菜SAN" data-price="6">
+                        凉拌SAN
+                        <span>··········￥ &nbsp;6</span>
+                    </label>
+                </dd>
+                <dd>
+                    <label>
+                        <input type="checkbox" name="liangcai" value="冷切DOM" data-price="4">
+                        冷切DOM
+                        <span>··········￥ &nbsp;4</span>
+                    </label>
+                </dd>
+            </dl>
+            <dl>
+                <dt>主菜（五选一，必点）</dt>
+                <dd>
+                    <label>
+                        <input type="checkbox" name="zhucai" value="UL炖LI" data-price="12">
+                        UL炖LI
+                        <span>··········￥12</span>
+                    </label>
+                </dd>
+                <dd>
+                    <label>
+                        <input type="checkbox" name="zhucai" value="红烧HEAD" data-price="15">
+                        红烧HEAD
+                        <span>··········￥15</span>
+                    </label>
+                </dd>
+                <dd>
+                    <label><input type="checkbox" name="zhucai" value="酥炸ECharts" data-price="18">
+                        酥炸ECharts
+                        <span>··········￥18</span>
+                    </label>
+                </dd>
+                <dd>
+                    <label>
+                        <input type="checkbox" name="zhucai" value="炙烤CSS" data-price="16">
+                        炙烤CSS
+                        <span>··········￥16</span>
+                    </label>
+                </dd>
+                <dd>
+                    <label>
+                        <input type="checkbox" name="zhucai" value="清蒸DIV" data-price="12">
+                        清蒸DIV
+                        <span>··········￥12</span>
+                    </label>
+                </dd>
+            </dl>
+            <dl>
+                <dt>饮品（二选一，可不点）</dt>
+                <dd>
+                    <label>
+                        <input type="checkbox" name="yinpin" value="鲜榨flex" data-price="5">
+                        鲜榨flex
+                        <span>··········￥ &nbsp;5</span>
+                    </label>
+                </dd>
+                <dd>
+                    <label>
+                        <input type="checkbox" name="yinpin" value="小程序奶茶" data-price="6">
+                        小程序奶茶
+                        <span>··········￥ &nbsp;6</span>
+                    </label>
+                </dd>
+            </dl>
+        </div>
+        <div class="orderbtn alertBtn">
+            <button class="yesConfirm noOrderDishes">点好了，快点上菜</button>
+            <button class="noConfirm">不吃了</button>
+        </div>
+    </section>
+
+    <!-- 招聘厨师区域 -->
+    <section class="buyChefBox inline-box">
+        <h2>招聘新厨师</h2>
+        <p>招聘一名新厨师可以帮你更快地为顾客烹饪菜肴，增加收入。</p>
+        <p>你最多可以拥有六名厨师。但每个厨师每周需要你支付工资￥140</p>
+        <p>请问你确认新招聘一名厨师吗？</p>
+        <div class="buyChefbtn alertBtn">
+            <button class="yesConfirm">是的，确认招聘</button>
+            <button class="noConfirm">先不了</button>
+        </div>
+    </section>
+
+    <!-- 解雇厨师区域 -->
+    <section class="fireChefBox inline-box">
+        <h2>解雇厨师</h2>
+        <p>解雇当前闲置的厨师可以帮你节省成本。</p>
+        <p>解雇时会按厨师本周已经工作的日子结算工资，并会赔偿一周工资作为解约金。</p>
+        <p>解雇当前厨师结算工资及解约金需要付出￥<span class="fireChefPay"></span></p>
+        <div class="fireChefbtn alertBtn">
+            <button class="yesConfirm">是的，确认解雇</button>
+            <button class="noConfirm">先不了</button>
+        </div>
+    </section>
+
+    <!-- 提示信息框 -->
+    <section class="allInfoAlert">
+        <div class="freeTableAlert noFinished">
+            <p>餐厅目前有空位，赶紧点击等位客人头像让客人入座点餐吧</p>
+        </div>
+        <div class="finishedOrderAlert finished">
+            <p><span id="finishedOrderMan">QIAN</span>完成点餐，等候用餐</p>
+            <p>疯狂点击厨师头像可以加速做菜</p>
+        </div>
+        <div class="disappointedAlert noFinished">
+            <p><span id="disappointedCus">QIAN</span>失望而归，别再让客人挨饿了</p>
+        </div>
+        <div class="finishedPayAlert finished">
+            <p><span id="finishedPayCus">QIAN</span>完成用餐，收获￥<span id="finishedPay">18</span></p>
+        </div>
+        <div class="finishedBuyChefAlert finished">
+            <p>招聘厨师成功！您已经有<span id="chefNumber"></span>名厨师</p>
+        </div>
+        <div class="finishedFireChefAlert finished">
+            <p>解约厨师成功，解约支出￥<span class="fireChefPay"></span></p>
+        </div>
+        <div class="lackPayFireMoneyAlert noFinished">
+            <p>你的金额已经不足支付解约金</p>
+        </div>
+    </section>
+
+    <script src="./js/restaurant.js"></script>
+    <script src="./js/chef.js"></script>
+    <script src="./js/customer.js"></script>
+    <script src="./js/dish.js"></script>
+    <script src="./js/progress.js"></script>
+</body>
+
+</html>

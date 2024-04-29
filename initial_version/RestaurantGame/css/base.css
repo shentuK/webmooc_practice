@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    /* 取消点击时边框和蓝底 */
+    outline: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* 消除图片和盒子之间的空隙 */
+img {
+    width: 100%;
+    vertical-align: top;
+}
+
+/* 状态样式 */
+/* 厨师空闲 */
+.chef-free {
+    background-image: linear-gradient(to right, #dddddd 50%, #aaaaaa 50%);
+}
+
+/* 厨师做菜 */
+.chef-cooking {
+    background-image: linear-gradient(to right, #e67d54 50%, #b44d08 50%);
+}
+
+/* 厨师完成做菜 */
+.chef-finished {
+    background-image: linear-gradient(to right, #947de6 50%, #4129af 50%);
+}
+
+/* 顾客排队/点餐 */
+.customer-waiting{
+    background-image: linear-gradient(to right, #7591c5 50%, #2166c0 50%);
+}
+
+/* 顾客等餐 */
+.customer-seating{
+    background-image: linear-gradient(to right, #e22f29 50%, #8f0707 50%);
+}
+
+/* 顾客进餐 */
+.customer-eating{
+    background-image: linear-gradient(to right, #e67d54 50%, #cc5405 50%);
+}
+
+/* 顾客结账 */
+.customer-checkout{
+    background-image: linear-gradient(to right, #56d17f 50%, #0d9c0d 50%);
+}
+
+/* 顾客等候超时/生气 */
+.customer-timeout{
+    background-image: linear-gradient(to right, #521919 50%, #250707 50%);
+}
+

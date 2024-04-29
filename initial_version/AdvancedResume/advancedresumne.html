@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdvancedResume高级简历作业</title>
+    <!-- 将元素的默认样式进行复位 -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <!-- 放置一些公共类，字体图标等 -->
+    <link rel="stylesheet" href="./css/base.css">
+    <!-- 页面的主要样式 -->
+    <link rel="stylesheet" href="./css/advancedresume.css">
+    <!-- 技能掌握程度 max:120px -->
+    <style>
+        .ds {
+            width: 40px;
+        }
+
+        .os {
+            width: 50px;
+        }
+
+        .network {
+            width: 40px;
+        }
+
+        .database {
+            width: 50px;
+        }
+
+        .html {
+            width: 70px;
+        }
+
+        .css {
+            width: 70px;
+        }
+
+        .js {
+            width: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 头部 -->
+    <header class="site-head">
+        <!-- 内容部分 -->
+        <div class="center-wrap">
+            <!-- namelogo -->
+            <h1>木头杨</h1>
+            <!-- 个人照片 -->
+            <img src="./images/me.jpg" alt="个人照片">
+            <!-- 链接 -->
+            <div class="head-links">
+                <a href="#selfintro">个人介绍</a>
+                <span>|</span>
+                <a href="#programs">项目介绍</a>
+                <span>|</span>
+                <a href="#msg">给我留言</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 基本介绍及联系方式banner -->
+    <section class="basic-contact center-wrap">
+        <h2>职业发展愿景</h2>
+        <textarea placeholder="职业发展愿景描述正文" cols="115" rows="3" class="careerintro"
+            disabled>产品经理，开发出一个能在中国游戏史上留名的经典游戏</textarea>
+        <address class="email-tel">
+            <p><i class="iconfont">&#xe908;</i>1234567890@qq.com</p>
+            <p><i class="iconfont">&#xe62f;</i>12345678900</p>
+        </address>
+    </section>
+
+    <!-- 个人技能介绍、基本经历介绍 -->
+    <section class="skills-experiences center-wrap" id="selfintro">
+        <!-- 技能 -->
+        <div class="skills">
+            <h3>技能掌握</h3>
+            <ul class="skill-level">
+                <li>
+                    <div class="skill">数据结构与算法</div>
+                    <div class="level ds"></div>
+                </li>
+                <li>
+                    <div class="skill">操作系统</div>
+                    <div class="level os"></div>
+                </li>
+                <li>
+                    <div class="skill">计算机网络</div>
+                    <div class="level network"></div>
+                </li>
+                <li>
+                    <div class="skill">数据库</div>
+                    <div class="level database"></div>
+                </li>
+                <li>
+                    <div class="skill">html</div>
+                    <div class="level html"></div>
+                </li>
+                <li>
+                    <div class="skill">css</div>
+                    <div class="level css"></div>
+                </li>
+                <li>
+                    <div class="skill">js</div>
+                    <div class="level js"></div>
+                </li>
+            </ul>
+        </div>
+        <!-- 经历 -->
+        <div class="experiences">
+            <!-- tab菜单 -->
+            <ul class="tab" id="tab">
+                <li class="current" data-n="edu">教育经历</li>
+                <li data-n="job">工作经历</li>
+                <li></li>
+            </ul>
+            <!-- tab内容 -->
+            <div class="con">
+                <div class="tabcon show" data-n="edu">
+                    <div class="exptime">
+                        <ul>
+                            <li>2004-2007</li>
+                            <li>2007-2011</li>
+                            <li>2011-2014</li>
+                            <li>2016-2020</li>
+                        </ul>
+                    </div>
+                    <div class="expcon">
+                        <p>四川XX中学</p>
+                        <p>西南XX大学</p>
+                        <p>西南XX研究生</p>
+                        <p>攻读博士</p>
+                    </div>
+                </div>
+                <div class="tabcon" data-n="job">
+                    <div class="exptime">
+                        <ul>
+                            <li>2020-2021</li>
+                            <li>2021-2022</li>
+                            <li>2022-2023</li>
+                            <li>2023-2024</li>
+                        </ul>
+                    </div>
+                    <div class="expcon">
+                        <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+                        <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+                        <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+                        <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 项目介绍模块 -->
+    <section class="programintro" id="programs">
+        <div class="program">
+            <div class="demopic fill"></div>
+            <div class="center">
+                <!-- logo图 -->
+                <img src="./images/muyunyou.jpg" alt="慕云游项目" class="prampic">
+                <!-- 项目介绍 -->
+                <div class="pramcon">
+                    <div class="hd">
+                        <h3>项目《慕云游》主页开发</h3>
+                        <span>2023-10-01</span>
+                    </div>
+                    <div class="bd">
+                        <p>
+                            前端Coder | XXXX
+                        </p>
+                        <textarea disabled>项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍</textarea>
+                        <p>
+                            HTML | CSS | JS
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- demo图 -->
+            <div class="demopic">
+                <img src="./images/demo.jpg" alt="demo图">
+            </div>
+        </div>
+        <div class="program">
+            <div class="demopic fill"></div>
+            <div class="center">
+                <!-- logo图 -->
+                <img src="./images/mujiaju.jpg" alt="慕家居项目" class="prampic">
+                <!-- 项目介绍 -->
+                <div class="pramcon">
+                    <div class="hd">
+                        <h3>项目《慕家居》</h3>
+                        <span>2023-10-10</span>
+                    </div>
+                    <div class="bd">
+                        <p>
+                            前端Coder | XXXX
+                        </p>
+                        <textarea disabled>项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍</textarea>
+                        <p>
+                            HTML | CSS | JS
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- demo图 -->
+            <div class="demopic">
+                <img src="./images/demo.jpg" alt="demo图">
+            </div>
+        </div>
+        <div class="program">
+            <div class="demopic fill"></div>
+            <div class="center">
+                <!-- logo图 -->
+                <img src="./images/restaurant.png" alt="餐厅游戏项目" class="prampic">
+                <!-- 项目介绍 -->
+                <div class="pramcon">
+                    <div class="hd">
+                        <h3>项目《移动Web餐厅游戏》</h3>
+                        <span>2023-12-30</span>
+                    </div>
+                    <div class="bd">
+                        <p>
+                            前端Coder | XXXX
+                        </p>
+                        <textarea disabled>项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍</textarea>
+                        <p>
+                            HTML | CSS | JS
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- demo图 -->
+            <div class="demopic">
+                <img src="./images/demo.jpg" alt="demo图">
+            </div>
+        </div>
+    </section>
+
+    <!-- 互动部分 -->
+    <section class="interact center-wrap" id="msg">
+        <!-- 项目图集 -->
+        <div class="programpics">
+            <ul>
+                <li>
+                    <span>
+                        <i class="iconfont heart">&#xe83f;</i>
+                        <i class="iconfont redheart">&#xe85c;</i>
+                    </span>
+                </li>
+                <li>
+                    <span>
+                        <i class="iconfont heart">&#xe83f;</i>
+                        <i class="iconfont redheart">&#xe85c;</i>
+                    </span>
+                </li>
+                <li>
+                    <span>
+                        <i class="iconfont heart">&#xe83f;</i>
+                        <i class="iconfont redheart">&#xe85c;</i>
+                    </span>
+                </li>
+                <li>
+                    <span>
+                        <i class="iconfont heart">&#xe83f;</i>
+                        <i class="iconfont redheart">&#xe85c;</i>
+                    </span>
+                </li>
+                <li>
+                    <span>
+                        <i class="iconfont heart">&#xe83f;</i>
+                        <i class="iconfont redheart">&#xe85c;</i>
+                    </span>
+                </li>
+                <li>
+                    <span>
+                        <i class="iconfont heart">&#xe83f;</i>
+                        <i class="iconfont redheart">&#xe85c;</i>
+                    </span>
+                </li>
+                <li>
+                    <span>
+                        <i class="iconfont heart">&#xe83f;</i>
+                        <i class="iconfont redheart">&#xe85c;</i>
+                    </span>
+                </li>
+                <li>
+                    <span>
+                        <i class="iconfont heart">&#xe83f;</i>
+                        <i class="iconfont redheart">&#xe85c;</i>
+                    </span>
+                </li>
+            </ul>
+        </div>
+        <!-- 留言板 -->
+        <div class="messagebox">
+            <h4>留言板</h4>
+            <!-- 留言板内容区域 -->
+            <div class="messageContent" id="messageContent">
+                <!-- 留言测试 -->
+                <div class="msgitem">
+                    <div class="profile">
+                        <div class="profilePhoto">测试</div>
+                        <span class="nickname">Simon</span>
+                    </div>
+                    <textarea class="content" disabled>this is my first message</textarea>
+                </div>
+            </div>
+            <!-- 留言发言区域 -->
+            <div class="messageSend">
+                <input type="text" placeholder="留言内容" class="edit1" id="messagecon">
+                <div class="edit2">
+                    <input type="text" placeholder="留言姓名" id="username" class="username">
+                    <input id="sendbtn" class="sendbtn" type="button" value="发送">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="site-foot">
+        <p>&copy;2023 Southwest University 高级简历作业 木头杨</p>
+    </footer>
+
+    <!-- 返回顶部按钮 -->
+    <a href="javascript:;" class="backtotop" id="backtotop">
+        返回<br>顶部
+    </a>
+
+    <script src="./js/tab.js"></script>
+    <script src="./js/demoPic.js"></script>
+    <script src="./js/zan.js"></script>
+    <script src="./js/sendMessage.js"></script>
+    <script src="./js/backtoTop.js"></script>
+</body>
+
+</html>

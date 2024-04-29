@@ -1,0 +1,511 @@
+/* 头部 */
+.site-head {
+    height: 60px;
+    line-height: 60px;
+    background-image: linear-gradient(to right, #9CBCB3, #48BAE9);
+}
+
+.site-head .center-wrap {
+    height: 100%;
+    position: relative;
+}
+
+.site-head h1 {
+    float: left;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: "刀隶体";
+}
+
+.site-head img {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -24px;
+    width: 46px;
+    border: 1px solid #000;
+    border-radius: 50%;
+}
+
+/* 悬停头像旋转 */
+.site-head img:hover {
+    animation: move 1s linear 0s infinite;
+}
+
+@keyframes move {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.site-head img:hover {
+    transform: rotate(360deg);
+}
+
+.site-head .head-links {
+    float: right;
+    margin-right: 88px;
+    font-size: 14px;
+}
+
+.site-head .head-links a,
+.site-head .head-links span {
+    color: #000;
+    margin-left: 20px;
+}
+
+.site-head .head-links a:hover {
+    color: #646c6a;
+}
+
+/* 基本介绍及联系方式banner */
+.basic-contact {
+    box-sizing: border-box;
+    height: 160px;
+    margin: 10px auto;
+    padding: 20px;
+    background-color: red;
+    background-image: linear-gradient(180deg, #e6eceb 0%, #dde0df 98%);
+}
+
+.basic-contact h2 {
+    font-size: 22px;
+}
+
+.basic-contact .careerintro {
+    font-size: 12px;
+    font-family: '宋体';
+    padding-top: 5px;
+    box-sizing: border-box;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    resize: none;
+}
+
+.basic-contact .email-tel {
+    font-size: 12px;
+}
+
+/* 个人技能介绍、基本经历介绍 */
+.skills-experiences {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 个人技能 */
+.skills-experiences .skills {
+    box-sizing: border-box;
+    width: 240px;
+    padding: 10px;
+    background-image: linear-gradient(180deg, #e6eceb 0%, #dde0df 98%);
+}
+
+.skills h3 {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+.skills .skill-level li {
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.skills .skill-level li .skill {
+    float: left;
+    width: 90px;
+    text-align: right;
+    margin-right: 10px;
+}
+
+.skills .skill-level li .level {
+    float: left;
+    height: 20px;
+    background-color: rgba(48, 110, 160, 0.712);
+}
+
+/* 基本经历 */
+.skills-experiences .experiences {
+    width: 708px;
+    background-image: linear-gradient(180deg, #e6eceb 0%, #dde0df 98%);
+    border: 1px solid rgb(201, 197, 197);
+}
+
+.experiences .tab {
+    display: flex;
+}
+
+.experiences .tab li {
+    cursor: pointer;
+    flex-grow: 1;
+    height: 40px;
+    border-right: 1px solid rgb(201, 197, 197);
+    border-bottom: 1px solid rgb(201, 197, 197);
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 40px;
+}
+
+.experiences .tab li:last-child {
+    border-right: none;
+    pointer-events: none;
+}
+
+.experiences .tab li.current {
+    border-bottom: none;
+}
+
+.experiences .tabcon {
+    padding: 20px;
+    display: none;
+}
+
+.experiences .show {
+    display: block;
+}
+
+.tabcon .exptime {
+    float: left;
+    margin-right: 80px;
+}
+
+.tabcon .expcon {
+    float: left;
+}
+
+.tabcon .exptime li,
+.tabcon .expcon p {
+    margin-bottom: 30px;
+}
+
+/* 项目介绍模块 */
+.programintro {
+    padding: 10px 0;
+}
+
+.programintro .program {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.programintro .program:nth-child(odd) {
+    background-image: linear-gradient(180deg, #e6eceb 0%, #dde0df 98%);
+}
+
+.program .center {
+    width: 960px;
+    display: flex;
+    align-items: center;
+}
+
+.program .prampic {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000;
+    margin-right: 20px;
+}
+
+.program .pramcon {
+    padding: 20px 0;
+}
+
+.pramcon .hd {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.pramcon .hd h3 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.pramcon .hd span {
+    font-size: 12px;
+    align-self: flex-end;
+}
+
+.program .bd textarea {
+    margin: 20px 0;
+    font-size: 14px;
+    width: 838px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    resize: none;
+}
+
+.program .bd p {
+    font-size: 14px;
+}
+
+.program .demopic {
+    flex: 1;
+    max-width: 160px;
+    max-height: 160px;
+    border: 1px solid black;
+    margin-left: 20px;
+}
+
+.program .demopic img {
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+}
+
+.program .fill {
+    visibility: hidden;
+}
+
+/* 互动部分 */
+.interact {
+    height: 370px;
+}
+
+.interact .programpics {
+    float: left;
+    width: 630px;
+    height: 100%;
+    background-image: linear-gradient(180deg, #e6eceb 0%, #dde0df 98%);
+}
+
+.programpics ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.programpics ul li {
+    width: 150px;
+    height: 180px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.programpics ul li:nth-child(1) {
+    background: url(../images/Info5.png) no-repeat;
+    background-size: 150px 180px;
+}
+
+.programpics ul li:nth-child(2) {
+    background: url(../images/Info1.png) no-repeat;
+    background-size: 150px 180px;
+}
+
+.programpics ul li:nth-child(3) {
+    background: url(../images/Info3.png) no-repeat;
+    background-size: 150px 180px;
+}
+
+.programpics ul li:nth-child(4) {
+    background: url(../images/Info1.png) no-repeat;
+    background-size: 150px 180px;
+}
+
+.programpics ul li:nth-child(5) {
+    background: url(../images/Info6.png) no-repeat;
+    background-size: 150px 180px;
+}
+
+.programpics ul li:nth-child(6) {
+    background: url(../images/Info4.png) no-repeat;
+    background-size: 150px 180px;
+}
+
+.programpics ul li:nth-child(7) {
+    background: url(../images/Info2.jpg) no-repeat;
+    background-size: 150px 180px;
+}
+
+.programpics ul li:nth-child(8) {
+    background: url(../images/Info6.png) no-repeat;
+    background-size: 150px 180px;
+}
+
+.programpics ul li::before {
+    content: 'information.';
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    font-size: 14px;
+    color: rgb(49, 47, 47);
+}
+
+.programpics span {
+    position: absolute;
+    right: 26px;
+    bottom: 26px;
+    cursor: pointer;
+    /* 取消蓝底 */
+    user-select: none;
+}
+
+.programpics .iconfont {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.redheart {
+    color: red;
+    visibility: hidden;
+}
+
+/* 留言板 */
+.interact .messagebox {
+    float: right;
+    width: 320px;
+    height: 100%;
+    background-image: linear-gradient(180deg, #e6eceb 0%, #dde0df 98%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.messagebox h4 {
+    text-align: center;
+    line-height: 40px;
+}
+
+/* 留言板内容区域 */
+.messageContent {
+    box-sizing: border-box;
+    width: 300px;
+    height: 240px;
+    margin-bottom: 10px;
+    border: 1px dashed #000;
+    overflow: auto;
+}
+
+/* 取消滚动条 */
+.messageContent::-webkit-scrollbar {
+    display: none;
+}
+
+/* 每条留言样式 */
+.msgitem {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.msgitem .profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 46px;
+    height: 90px;
+}
+
+.msgitem .profile .profilePhoto {
+    width: 44px;
+    height: 44px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 44px;
+    font-size: 20px;
+    font-weight: bold;
+    color: chocolate;
+}
+
+.msgitem .profile .nickname {
+    font-size: 12px;
+    text-align: center;
+}
+
+.msgitem .content {
+    /* 通过order来实现交叉效果 */
+    order: 1;
+    width: 242px;
+    height: 88px;
+    border: 1px solid #000;
+    outline: none;
+    resize: none;
+    background-color: transparent;
+}
+
+/* 留言发言区域 */
+.messageSend {
+    width: 300px;
+    height: 70px;
+}
+
+.messageSend input {
+    box-sizing: border-box;
+    background-color: transparent;
+    height: 30px;
+    border: 1px solid #000;
+}
+
+.messageSend .edit1 {
+    width: 300px;
+    margin-bottom: 10px;
+}
+
+.messageSend .edit2 {
+    width: 300px;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.edit2 .username {
+    width: 190px;
+}
+
+.edit2 .sendbtn {
+    width: 100px;
+    cursor: pointer;
+}
+
+.edit2 .sendbtn:hover {
+    background-color: #8a648aef;
+}
+
+/* 页脚 */
+.site-foot {
+    height: 80px;
+    background-color: #1C1F21;
+    margin-top: 10px;
+}
+
+.site-foot p {
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    line-height: 80px;
+}
+
+/* 返回顶部按钮 */
+.backtotop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 80px;
+    height: 80px;
+    background: #ccc;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 12px;
+    box-sizing: border-box;
+    color: #000;
+    border-radius: 50%;
+    /* 隐藏元素 */
+    display: none;
+}
+
+.backtotop:hover {
+    background-color: beige;
+}

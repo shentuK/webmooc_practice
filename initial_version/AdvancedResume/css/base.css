@@ -1,0 +1,45 @@
+/* NAMELOGO字体 */
+@font-face {
+    font-family: "刀隶体";
+    font-weight: 400;
+    src: url("../fonts/WMibgKRoROUI.woff2") format("woff2"),
+        url("../fonts/WMibgKRoROUI.woff") format("woff");
+    font-display: swap;
+}
+
+/* 邮箱、电话字体图标 */
+@font-face {
+    font-family: 'iconfont';
+    src: url('../fonts/iconfont.ttf') format('truetype');
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* 页面的版心 */
+.center-wrap {
+    width: 960px;
+    margin: 0px auto;
+}
+
+/* 清除浮动 */
+.clearfix {
+    overflow: hidden;
+}
+
+/* 清除浮动 */
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+    overflow: hidden;
+}
+
+textarea {
+    color: #000;
+}
