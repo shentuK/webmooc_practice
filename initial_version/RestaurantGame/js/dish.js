@@ -214,6 +214,7 @@ function serving() {
 function setCusStyle() {
     if (this.owner.willEatDishes.length) {
         const eatingDish = this.owner.willEatDishes.shift();
+        eatingDish.eating();
         eatingDish.cus_dish.eatTimer = true;
     } else if (this.owner.orderedDishes.some(dish => dish.cus_state == 'ordered')) {
         this.owner.dom.classList.replace('customer-eating', 'customer-seating');
