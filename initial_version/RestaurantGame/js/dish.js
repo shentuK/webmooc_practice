@@ -114,13 +114,17 @@ class Dishes {
         this.chef_dish.dom.style.backgroundImage = ``;
         this.chef_dish.dom.style.backgroundColor = '#947de6';
     }
-    // 正在被顾客食用
-    eating() {
-        this.cus_state = 'eating';
+    // 顾客已接单，等待被顾客食用
+    waitingEat() {
+        this.cus_state = 'waitingEat';
         this.cus_dish.startColor = '#e67d54';
         this.cus_dish.endColor = '#cc5405';
         this.cus_dish.time = this.eatingTime;
         this.cus_dish.pos = 0;
+    }
+    // 正在被顾客食用
+    eating() {
+        this.cus_state = 'eating';
     }
     // 已被顾客吃完
     eatup() {
@@ -184,14 +188,15 @@ function serving() {
     // 实现串行吃菜
     this.owner.owner.willEatDishes.push(this.owner);
     this.serveIcon.style.display = 'none';
-    this.owner.eating();
+    this.owner.waitingEat();
     // 有这个菜的厨师直接上
     allChefs.find(chef => chef.state == 'complete' && chef.cookDish[0].name == this.owner.name).free();
     // 需要将已点击上菜按钮的也就是待吃的菜放进一个队列，先进先吃
     // 点击上菜按钮，只需要检测是否有其他菜正在吃，如果再吃，就等待
-    if (this.owner.owner.orderedDishes.some(dish => dish.cus_state == 'eating' && dish.cus_dish.pos != 0)) {
+    if (this.owner.owner.orderedDishes.some(dish => dish.cus_state == 'eating')) {
         this.eatTimer = false;
     } else {
+        this.owner.eating();
         this.owner.owner.willEatDishes.shift();
         this.owner.owner.eating();
     }
